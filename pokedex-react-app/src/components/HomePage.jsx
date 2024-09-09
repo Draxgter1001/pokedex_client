@@ -13,7 +13,7 @@ function HomePage() {
     const [searchPerformed, setSearchPerformed] = useState(false); 
     const [randomPokemonList, setRandomPokemonList] = useState([]); // State for random Pokémon
 
-    const baseUrl = "https://pokedex-backend-2c61f0c0a4bc.herokuapp.com/"; // Backend URL
+    const baseUrl = "https://pokedex-backend-2c61f0c0a4bc.herokuapp.com/pokedex"; // Backend URL
 
     useEffect(() => {
         // Fetch random Pokémon when the component mounts
