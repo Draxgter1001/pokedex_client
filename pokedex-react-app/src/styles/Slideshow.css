@@ -1,0 +1,26 @@
+.slideshow-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    opacity: 0; 
+    animation: fadeInSlideshow 1s forwards ease-in-out;
+    animation-delay: 5s;
+    transition: opacity 1s ease-in-out; 
+}
+
+.carousel-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes fadeInSlideshow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

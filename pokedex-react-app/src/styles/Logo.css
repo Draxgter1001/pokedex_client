@@ -1,0 +1,47 @@
+
+.main {
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-setting {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeInAndPushUp 4s forwards;
+}
+
+.logo-setting img {
+    width: 500px;
+    height: auto;
+}
+
+@keyframes fadeInAndPushUp {
+    0% {
+        opacity: 0;
+        top: 50%;
+    }
+    37.5% { 
+        opacity: 1;
+        top: 50%;
+    }
+    100% {
+        opacity: 1;
+        top: 10px; 
+    }
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+    .logo-setting img {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-setting img {
+        width: 90vw;
+    }
+}

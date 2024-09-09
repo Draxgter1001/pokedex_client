@@ -1,0 +1,39 @@
+.app-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/3.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 238% 238%;
+    opacity: 0.7;
+    z-index: -1; /* Ensures the background stays behind other content */
+    animation: fadeIn 2s;
+}
+
+.app-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px; 
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 0.7; }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .background-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .background-image {
+        width: auto;
+        height: 100%;
+    }
+}

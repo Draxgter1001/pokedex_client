@@ -1,0 +1,13 @@
+.pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    position: relative; /* Ensure it is positioned correctly */
+    z-index: 1; /* Ensure it is above the background */
+}
+
+.slideshow-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
