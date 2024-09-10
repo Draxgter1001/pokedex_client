@@ -28,7 +28,7 @@ const PokemonCard = ({ pokemon, baseUrl }) => {
     const pokemonOfficialUrl = `https://www.pokemon.com/us/pokedex/${pokemon.name.toLowerCase()}`;
 
     return (
-        <a href={pokemonOfficialUrl} target='_blank' rel="noopener noref">
+        <a href={pokemonOfficialUrl} target='_blank' rel="noopener noref" className='pokemon-card-link'>
             <div className="pokemon-card" style={{ backgroundColor: typeColor }}>
                 <img
                     src={`${baseUrl}/images/${pokemon.name.toLowerCase()}`}
