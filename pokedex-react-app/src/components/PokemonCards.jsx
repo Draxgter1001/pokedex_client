@@ -25,10 +25,10 @@ const typeColors = {
 
 const PokemonCard = ({ pokemon, baseUrl }) => {
     const typeColor = typeColors[pokemon.pokemon_type1.toLowerCase()] || '#A8A77A';
-    const pokemonOfficialUrl = 'https://www.pokemon.com/uk/pokedex/${pokemon.name.toLowerCase()}';
+    const pokemonOfficialUrl = `https://www.pokemon.com/us/pokedex/${pokemon.name.toLowerCase()}`;
 
     return (
-        <a href={pokemonOfficialUrl} target='_blank' rel="noopener noreferrer">
+        <a href={pokemonOfficialUrl} target='_blank' rel="noopener noref">
             <div className="pokemon-card" style={{ backgroundColor: typeColor }}>
                 <img
                     src={`${baseUrl}/images/${pokemon.name.toLowerCase()}`}
