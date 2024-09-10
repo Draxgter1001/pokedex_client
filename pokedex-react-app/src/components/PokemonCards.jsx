@@ -25,20 +25,24 @@ const typeColors = {
 
 const PokemonCard = ({ pokemon, baseUrl }) => {
     const typeColor = typeColors[pokemon.pokemon_type1.toLowerCase()] || '#A8A77A';
+    const pokemonOfficialUrl = 'https://www.pokemon.com/uk/pokedex/${pokemon.name.toLowerCase()}';
 
     return (
-        <div className="pokemon-card" style={{ backgroundColor: typeColor }}>
-            <img
-                src={`${baseUrl}/images/${pokemon.name.toLowerCase()}`}
-                alt={pokemon.name}
-                className="pokemon-image"
-            />
-            <div className="pokemon-details">
-                <h3>{pokemon.name}</h3>
-                <p>Type: {pokemon.pokemon_type1} {pokemon.pokemon_type2 ? `/ ${pokemon.pokemon_type2}` : ''}</p>
-                <p>Evolution: {pokemon.pokemon_evolution}</p>
+        <a href={pokemonOfficialUrl} target='_blank' rel="noopener noreferrer">
+            <div className="pokemon-card" style={{ backgroundColor: typeColor }}>
+                <img
+                    src={`${baseUrl}/images/${pokemon.name.toLowerCase()}`}
+                    alt={pokemon.name}
+                    className="pokemon-image"
+                />
+                <div className="pokemon-details">
+                    <h3>{pokemon.name}</h3>
+                    <p>Type: {pokemon.pokemon_type1} {pokemon.pokemon_type2 ? `/ ${pokemon.pokemon_type2}` : ''}</p>
+                    <p>Evolution: {pokemon.pokemon_evolution}</p>
+                </div>
             </div>
-        </div>
+        </a>
+        
     );
 };
 
